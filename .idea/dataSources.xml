@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="academia_db@localhost" uuid="55b290b1-ffff-4e3c-9b1b-80cf71214067">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/academia_db</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="@43.255.154.47" uuid="bb8f8273-2e88-49d2-96e6-d4f3cdb3cd84">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://43.255.154.47:3306</jdbc-url>
+    </data-source>
+  </component>
+</project>
