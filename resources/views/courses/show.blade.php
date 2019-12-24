@@ -28,7 +28,7 @@
             <div class="row">
                 <div class="col-md-6 mb-4">
                     <p>
-                        <img src="images/course_5.jpg" alt="Image" class="img-fluid">
+                        <img src="{{ asset('images/course_5.jpg') }}" alt="Image" class="img-fluid">
                     </p>
                 </div>
                 <div class="col-lg-5 ml-auto align-self-center">

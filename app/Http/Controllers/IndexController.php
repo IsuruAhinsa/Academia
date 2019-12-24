@@ -15,7 +15,7 @@ class IndexController extends Controller
 
     public function getSlides()
     {
-        return Slide::all();
+        return Slide::where('published', 1)->get();
     }
 
     public function index()

@@ -4,7 +4,7 @@
 
         <div class="col-lg-3">
 
-            <p class="mb-4"><img src="{{ asset('images/logo.png') }}" alt="Image" class="img-fluid"></p>
+            <p class="mb-4"><img src="{{ Voyager::image(setting('site.logo')) }}" alt="Image" class="img-fluid"></p>
 
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae nemo minima qui dolor, iusto iure.</p>
 
