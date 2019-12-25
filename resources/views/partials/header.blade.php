@@ -14,7 +14,7 @@
 
                 <nav class="site-navigation position-relative text-right" role="navigation">
 
-                    {{ menu('main', 'partials.menu.main') }}
+                    @include('partials.menu.main')
 
                 </nav>
 

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
 use App\Slide;
 use App\Testimonial;
 use Illuminate\Http\Request;

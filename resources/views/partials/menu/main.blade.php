@@ -1,36 +1,49 @@
+@php
+    use App\Http\Controllers\Controller;
+    $categories = Controller::getCategories();
+@endphp
+
 <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
 
-    @foreach($items as $menu_item)
+    <li>
+        <a href="@if(Route::has('index')) {{ route('index') }} @endif" class="nav-link text-left font-weight-bold">
+            {{ __('Home') }}
+        </a>
+    </li>
 
-        @if(count($menu_item->children) >= 1)
+    <li class="has-children">
+        <a href="#" class="nav-link text-left font-weight-bold">
+            {{ __('Courses') }}
+        </a>
 
-            <li class="has-children">
-                <a href="@if(Route::has($menu_item->route)) {{ route($menu_item->route) }} @endif" class="nav-link text-left font-weight-bold">
-                    {{ $menu_item->title }}
-                </a>
+        <ul class="dropdown">
+            @foreach($categories as $category)
+                <li>
+                    <a href="{{ route('course.index', [$category->slug]) }}" class="font-weight-bold">
+                        {{ $category->name }}
+                    </a>
+                </li>
+            @endforeach
+        </ul>
 
-                <ul class="dropdown">
-                    @foreach($menu_item->children as $item)
-                        <li>
-                            <a href="@if(Route::has($item->route)) {{ route($item->route) }} @endif" class="font-weight-bold">
-                                {{$item->title}}
-                            </a>
-                        </li>
-                    @endforeach
-                </ul>
+    </li>
 
-            </li>
+    <li>
+        <a href="#" class="nav-link text-left font-weight-bold">
+            {{ __('News') }}
+        </a>
+    </li>
 
-        @else
+    <li>
+        <a href="#" class="nav-link text-left font-weight-bold">
+            {{ __('About Us') }}
+        </a>
+    </li>
 
-            <li>
-                <a href="@if(Route::has($menu_item->route)) {{ route($menu_item->route) }} @endif" class="nav-link text-left font-weight-bold">
-                    {{ $menu_item->title }}
-                </a>
-            </li>
-
-        @endif
-
-    @endforeach
+    <li>
+        <a href="#" class="nav-link text-left font-weight-bold">
+            {{ __('Contact') }}
+        </a>
+    </li>
 
 </ul>
