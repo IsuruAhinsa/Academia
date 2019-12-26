@@ -19,7 +19,7 @@
         <ul class="dropdown">
             @foreach($categories as $category)
                 <li>
-                    <a href="{{ route('course.index', [$category->slug]) }}" class="font-weight-bold">
+                    <a href="{{ route('courses.index', [$category->slug]) }}" class="font-weight-bold">
                         {{ $category->name }}
                     </a>
                 </li>
@@ -29,19 +29,19 @@
     </li>
 
     <li>
-        <a href="#" class="nav-link text-left font-weight-bold">
+        <a href="@if(Route::has('news.index')) {{ route('news.index') }} @endif" class="nav-link text-left font-weight-bold">
             {{ __('News') }}
         </a>
     </li>
 
     <li>
-        <a href="#" class="nav-link text-left font-weight-bold">
+        <a href="@if(Route::has('about')) {{ route('about') }} @endif" class="nav-link text-left font-weight-bold">
             {{ __('About Us') }}
         </a>
     </li>
 
     <li>
-        <a href="#" class="nav-link text-left font-weight-bold">
+        <a href="@if(Route::has('contact')) {{ route('contact') }} @endif" class="nav-link text-left font-weight-bold">
             {{ __('Contact') }}
         </a>
     </li>

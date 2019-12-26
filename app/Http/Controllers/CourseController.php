@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Category;
+use App\Course;
 use Illuminate\Http\Request;
 
 class CourseController extends Controller
@@ -10,12 +11,20 @@ class CourseController extends Controller
     public function index($slug)
     {
         return view('courses.index', [
-            'category' => $this->getCategory($slug)
+            'courses' => $this->getCourse($slug)
         ]);
     }
 
-    public function getCategory($slug)
+    public function getCategoryId($slug)
     {
-        return Category::where('slug', $slug)->get();
+        $category = Category::where('slug', $slug)->firstOrFail();
+        return $category->id;
+    }
+
+    public function getCourse($slug)
+    {
+        return Course::with('Category')
+            ->where('category_id', $this->getCategoryId($slug))
+            ->get();
     }
 }

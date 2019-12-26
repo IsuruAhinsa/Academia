@@ -15,8 +15,10 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'IndexController@index')->name('index');
-Route::get('course/{slug}', 'CourseController@index')->name('course.index');
-
+Route::get('courses/{slug}', 'CourseController@index')->name('courses.index');
+Route::get('news', 'NewsController@index')->name('news.index');
+Route::view('about', 'about')->name('about');
+Route::view('contact', 'contact')->name('contact');
 
 Auth::routes();
 
