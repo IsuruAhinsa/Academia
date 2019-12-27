@@ -29,7 +29,7 @@
                         </div>
                         <div class="feature-1-content">
                             <h2>Personalize Virtual Learning</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit morbi hendrerit elit</p>
+                            <p>A virtual learning environment (VLE) in educational technology is a Web-based platform for the digital aspects of courses of study, usually within educational institutions. We present resources, activities and interactions within a course structure and provide for the different stages of assessment. </p>
                             <p><a href="#" class="btn btn-primary px-4 rounded-0">Learn More</a></p>
                         </div>
                     </div>

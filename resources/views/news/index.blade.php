@@ -6,7 +6,7 @@
         <div class="container">
             <div class="row align-items-end">
                 <div class="col-lg-7">
-                    <h2 class="mb-0">Courses</h2>
+                    <h2 class="mb-0">News</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
                 </div>
             </div>
@@ -27,7 +27,7 @@
 
             <div class="row">
 
-                @include('partials.course')
+                @include('partials.news')
 
             </div>
 
