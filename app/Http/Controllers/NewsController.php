@@ -18,4 +18,12 @@ class NewsController extends Controller
             'news' => $this->getNews()
         ]);
     }
+
+    public function show($id)
+    {
+        $news = News::where('id', $id)->first();
+        return view('news.view', [
+            'news', $news
+        ]);
+    }
 }

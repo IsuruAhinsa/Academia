@@ -29,12 +29,17 @@ class IndexController extends Controller
 
     public function getLastNews()
     {
+        // get final news record
         return News::all()->last();
     }
 
     public function getNews()
     {
-        return News::orderBy('id', 'desc')->first();
+        // get last 3 news records except a final news record
+        return News::orderBy('id', 'desc')
+            ->skip(1)
+            ->take(3)
+            ->get();
     }
 
     public function index()

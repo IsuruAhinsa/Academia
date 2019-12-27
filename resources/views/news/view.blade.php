@@ -6,7 +6,7 @@
         <div class="container">
             <div class="row align-items-end">
                 <div class="col-lg-7">
-                    <h2 class="mb-0">Campus Camping and Learning Session</h2>
+                    <h2 class="mb-0">{{ $news->title }}</h2>
                     <p>June 6, 2019 by Admin</p>
                 </div>
             </div>

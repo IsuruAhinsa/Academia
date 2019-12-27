@@ -6,7 +6,7 @@
 
             <figure class="thumnail">
 
-                <a href="#">
+                <a href="{{ route('news.show', [$item->id]) }}">
                     <img src="{{ Voyager::image($item->image) }}" alt="Image" class="img-fluid">
                 </a>
 
@@ -22,7 +22,7 @@
                     {{ Str::limit(strip_tags($item->body), 200) }}
                 </p>
 
-                <p><a href="#" class="btn btn-primary rounded-0 px-4">Read More</a></p>
+                <p><a href="{{ route('news.show', [$item->id]) }}" class="btn btn-primary rounded-0 px-4">Read More</a></p>
 
             </div>
 
