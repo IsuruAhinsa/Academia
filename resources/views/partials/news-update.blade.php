@@ -17,7 +17,7 @@
 
                         <div class="post-entry-big">
 
-                            <a href="#" class="img-link">
+                            <a href="{{ route('news.show', [$last_news->id]) }}" class="img-link">
                                 <img src="{{ Voyager::image($last_news->image) }}" alt="Image" class="img-fluid">
                             </a>
 
@@ -30,7 +30,7 @@
                                 </div>
 
                                 <h3 class="post-heading">
-                                    <a href="#">{{ $last_news->title }}</a>
+                                    <a href="{{ route('news.show', [$last_news->id]) }}">{{ $last_news->title }}</a>
                                 </h3>
 
                             </div>
@@ -45,7 +45,7 @@
 
                             <div class="post-entry-big horizontal d-flex mb-4">
 
-                                <a href="#" class="img-link mr-4">
+                                <a href="{{ route('news.show', [$item->id]) }}" class="img-link mr-4">
                                     <img src="{{ Voyager::image($item->image) }}" alt="Image" class="img-fluid">
                                 </a>
 
@@ -58,7 +58,7 @@
                                     </div>
 
                                     <h3 class="post-heading">
-                                        <a href="#">{{ $item->title }}</a>
+                                        <a href="{{ route('news.show', [$item->id]) }}">{{ $item->title }}</a>
                                     </h3>
 
                                 </div>

@@ -22,8 +22,6 @@ class NewsController extends Controller
     public function show($id)
     {
         $news = News::where('id', $id)->first();
-        return view('news.view', [
-            'news', $news
-        ]);
+        return view('news.view')->with(compact('news'));
     }
 }
