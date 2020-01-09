@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'IndexController@index')->name('index');
 Route::get('courses/{slug}', 'CourseController@index')->name('courses.index');
+Route::get('courses/{category}/{slug}', 'CourseController@show')->name('courses.show');
 Route::get('news', 'NewsController@index')->name('news.index');
 Route::get('news/{id}', 'NewsController@show')->name('news.show');
 Route::view('about', 'about')->name('about');

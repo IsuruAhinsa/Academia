@@ -11,7 +11,14 @@ class CourseController extends Controller
     public function index($slug)
     {
         return view('courses.index', [
-            'courses' => $this->getCourse($slug)
+            'courses' => $this->getCourses($slug)
+        ]);
+    }
+
+    public function show($category, $slug)
+    {
+        return view('courses.show', [
+            'course' => $this->getCourseDetails($slug)
         ]);
     }
 
@@ -21,10 +28,17 @@ class CourseController extends Controller
         return $category->id;
     }
 
-    public function getCourse($slug)
+    public function getCourses($slug)
     {
         return Course::with('Category')
             ->where('category_id', $this->getCategoryId($slug))
             ->get();
+    }
+
+    public function getCourseDetails($slug)
+    {
+        return Course::with('Category')
+            ->where('slug', $slug)
+            ->firstOrFail();
     }
 }

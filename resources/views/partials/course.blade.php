@@ -24,7 +24,15 @@
 
                 <img src="{{ Voyager::image($course->icon) }}" alt="Image" class="img-fluid" width="64">
 
-                <h2 class="font-weight-bold">{{ $course->name }}</h2>
+                <h2 class="font-weight-bold mb-0">{{ $course->name }}</h2>
+
+                <h2 class="font-weight-bold mt-0">
+                    @if($course->language == "Sinhala")
+                        {{ __('සිංහල') }}
+                    @else
+                        {{ $course->language }}
+                    @endif
+                </h2>
 
                 <div class="rating text-center mb-3">
                     <span class="icon-star2 text-warning"></span>
@@ -34,11 +42,7 @@
                     <span class="icon-star2 text-warning"></span>
                 </div>
 
-                <p class="desc mb-4">
-                    {{ $course->description }}
-                </p>
-
-                <p><a href="#" class="btn btn-primary rounded-0 px-4">Enroll In This Course</a></p>
+                <p><a href="{{ route('courses.show',[$course->category->slug, $course->slug]) }}" class="btn btn-primary rounded-0 px-4">Click Here to More</a></p>
 
             </div>
 

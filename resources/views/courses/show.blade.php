@@ -3,43 +3,74 @@
 @section('content')
 
     <div class="site-section ftco-subscribe-1 site-blocks-cover pb-4" style="background-image: url({{ asset('images/bg_1.jpg') }})">
+
         <div class="container">
+
             <div class="row align-items-end">
+
                 <div class="col-lg-7">
-                    <h2 class="mb-0">How To Create Mobile Apps Using Ionic</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                    <h2 class="mb-0">{{ $course->name }}</h2>
+                    <p>{{ $course->category->name }}</p>
                 </div>
+
             </div>
+
         </div>
+
     </div>
 
     <div class="custom-breadcrumns border-bottom">
         <div class="container">
-            <a href="index.html">Home</a>
+            <a href="{{ route('index') }}">Home</a>
             <span class="mx-3 icon-keyboard_arrow_right"></span>
-            <a href="courses.html">Courses</a>
+            <a href="{{ URL::previous() }}">Courses</a>
             <span class="mx-3 icon-keyboard_arrow_right"></span>
-            <span class="current">Courses</span>
+            <span class="current">{{ $course->name }}</span>
         </div>
     </div>
 
     <div class="site-section">
+
         <div class="container">
+
             <div class="row">
+
                 <div class="col-md-6 mb-4">
+
                     <p>
-                        <img src="{{ asset('images/course_5.jpg') }}" alt="Image" class="img-fluid">
+                        <img src="{{ Voyager::image($course->image) }}" alt="Image" class="img-fluid">
                     </p>
+
                 </div>
+
                 <div class="col-lg-5 ml-auto align-self-center">
+
                     <h2 class="section-title-underline mb-5">
                         <span>Course Details</span>
                     </h2>
 
-                    <p><strong class="text-black d-block">Teacher:</strong> Craig Daniel</p>
-                    <p class="mb-5"><strong class="text-black d-block">Hours:</strong> 8:00 am &mdash; 9:30am</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At itaque dolore libero corrupti! Itaque, delectus?</p>
-                    <p>Modi sit dolor repellat esse! Sed necessitatibus itaque libero odit placeat nesciunt, voluptatum totam facere.</p>
+                    <p>
+                        <strong class="text-black d-block">Teacher:</strong>
+                        Craig Daniel
+                    </p>
+
+                    <p>
+                        <strong class="text-black d-block">Language:</strong>
+                        {{ $course->language }}
+                    </p>
+
+                    <p class="mb-5">
+                        <strong class="text-black d-block">Hours:</strong>
+                        8:00 am &mdash; 9:30am
+                    </p>
+
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. At itaque dolore libero corrupti! Itaque, delectus?
+                    </p>
+
+                    <p>
+                        {!! $course->description !!}
+                    </p>
 
                     <ul class="ul-check primary list-unstyled mb-5">
                         <li>Lorem ipsum dolor sit amet consectetur</li>
@@ -54,8 +85,11 @@
                     </p>
 
                 </div>
+
             </div>
+
         </div>
+
     </div>
 
     @include('partials.detail')
