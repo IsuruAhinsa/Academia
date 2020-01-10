@@ -5,7 +5,7 @@
         <div class="d-flex align-items-center">
 
             <div class="site-logo">
-                <a href="#" class="d-block">
+                <a href="{{ route('index') }}" class="d-block">
                     <img src="{{ Voyager::image(setting('site.logo')) }}" alt="Image" class="img-fluid">
                 </a>
             </div>

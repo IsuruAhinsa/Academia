@@ -35,38 +35,25 @@
 
             <div class="row">
 
-                <div class="col-md-6 mb-4">
+                <div class="col-md-8 mb-4">
 
                     <p>
                         <img src="{{ Voyager::image($course->image) }}" alt="Image" class="img-fluid">
                     </p>
 
-                </div>
+                    <br>
 
-                <div class="col-lg-5 ml-auto align-self-center">
-
-                    <h2 class="section-title-underline mb-5">
-                        <span>Course Details</span>
-                    </h2>
+                    <div class="card shadow-sm p-3 text-dark mb-4" style="border: none; border-left: 5px solid #51be78;">
+                        <span style="font-size: 35px; font-weight: bold">Course Overview</span>
+                    </div>
 
                     <p>
-                        <strong class="text-black d-block">Teacher:</strong>
-                        Craig Daniel
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab ad aliquam architecto assumenda blanditiis commodi consequuntur eum fuga inventore nesciunt nostrum odio optio quam quas, quasi sunt tempore veritatis voluptas. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium earum laborum recusandae? Alias aut culpa debitis dignissimos dolor ducimus eveniet excepturi facilis inventore itaque laudantium libero, molestias nam nihil nulla obcaecati officiis optio perferendis perspiciatis porro possimus quam quidem quisquam rem repellat reprehenderit sed tempora tempore totam vero. Aperiam corporis cupiditate distinctio dolores facere id possimus quo similique tempore unde. Adipisci beatae consectetur dicta dignissimos distinctio dolorem ducimus eius eum facilis fuga itaque iure laboriosam mollitia nesciunt nostrum officiis, provident quam quasi quo quos sapiente tenetur vel veritatis. Architecto beatae dolores harum inventore molestias quae rem repellendus rerum soluta voluptates?
                     </p>
 
-                    <p>
-                        <strong class="text-black d-block">Language:</strong>
-                        {{ $course->language }}
-                    </p>
-
-                    <p class="mb-5">
-                        <strong class="text-black d-block">Hours:</strong>
-                        8:00 am &mdash; 9:30am
-                    </p>
-
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. At itaque dolore libero corrupti! Itaque, delectus?
-                    </p>
+                    <div class="card shadow-sm p-3 text-dark mb-4" style="border: none; border-left: 5px solid #51be78;">
+                        <span style="font-size: 35px; font-weight: bold">Course Description</span>
+                    </div>
 
                     <p>
                         {!! $course->description !!}
@@ -79,6 +66,55 @@
                         <li>Necessitatibus</li>
                         <li>Sed necessitatibus itaque </li>
                     </ul>
+
+                    <div class="card shadow-sm p-3 text-dark mb-4" style="border: none; border-left: 5px solid #51be78;">
+                        <span style="font-size: 35px; font-weight: bold">Course Content</span>
+                    </div>
+
+                    <ol class="font-weight-bold mb-5 text-dark">
+                        <li>Lorem ipsum dolor sit amet consectetur</li>
+                        <li>consectetur adipisicing  </li>
+                        <li>Sit dolor repellat esse</li>
+                        <li>Necessitatibus</li>
+                        <li>Sed necessitatibus itaque </li>
+                        <li>Lorem ipsum dolor sit amet consectetur</li>
+                        <li>consectetur adipisicing  </li>
+                        <li>Sit dolor repellat esse</li>
+                        <li>Necessitatibus</li>
+                        <li>Sed necessitatibus itaque </li>
+                        <li>Lorem ipsum dolor sit amet consectetur</li>
+                        <li>consectetur adipisicing  </li>
+                        <li>Sit dolor repellat esse</li>
+                        <li>Necessitatibus</li>
+                        <li>Sed necessitatibus itaque </li>
+                    </ol>
+
+                </div>
+
+                <div class="col-lg-4 ml-auto">
+
+                    <h2 class="section-title-underline mb-1">
+                        <span>Course Details</span>
+                    </h2>
+
+                    <p>
+                        <img src="{{ Voyager::image($course->icon) }}" alt="Image" class="img-fluid" width="64">
+                    </p>
+
+                    <p>
+                        <strong class="text-black d-block">Teacher:</strong>
+                        Unknown
+                    </p>
+
+                    <p>
+                        <strong class="text-black d-block">Language:</strong>
+                        {{ $course->language }}
+                    </p>
+
+                    <p class="mb-5">
+                        <strong class="text-black d-block">Hours:</strong>
+                        8:00 am &mdash; 9:30am
+                    </p>
 
                     <p>
                         <a href="#" class="btn btn-primary rounded-0 btn-lg px-5">Enroll</a>
