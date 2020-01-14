@@ -82,7 +82,7 @@
 
             <div class="row">
                 <div class="col-12">
-                    @include('partials.course-carousel')
+                    @include('partials.course.course-carousel')
                 </div>
             </div>
 
@@ -123,7 +123,7 @@
 
     @include('partials.detail')
 
-    @include('partials.news-update')
+    @include('partials.news.news-update')
 
     @include('partials.subscribe')
 

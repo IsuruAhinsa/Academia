@@ -21,7 +21,7 @@
 
     <link rel="stylesheet" href="{{ asset('css/aos.css')}}">
     <link href="{{ asset('css/jquery.mb.YTPlayer.min.css')}}" media="all" rel="stylesheet" type="text/css">
-
+    @yield('css')
     <link rel="stylesheet" href="{{ asset('css/style.css')}}">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -74,7 +74,7 @@
     <script src="{{ asset('js/jquery.fancybox.min.js')}}"></script>
     <script src="{{ asset('js/jquery.sticky.js')}}"></script>
     <script src="{{ asset('js/jquery.mb.YTPlayer.min.js')}}"></script>
-
+    @yield('js')
     <script src="{{ asset('js/main.js')}}"></script>
 </body>
 </html>

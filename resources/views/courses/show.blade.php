@@ -44,7 +44,7 @@
                     <br>
 
                     <div class="card shadow-sm p-3 text-dark mb-4" style="border: none; border-left: 5px solid #51be78;">
-                        <span style="font-size: 35px; font-weight: bold">Course Overview</span>
+                        <span style="font-size: 22px; font-weight: bold">Course Overview</span>
                     </div>
 
                     <p>
@@ -52,7 +52,7 @@
                     </p>
 
                     <div class="card shadow-sm p-3 text-dark mb-4" style="border: none; border-left: 5px solid #51be78;">
-                        <span style="font-size: 35px; font-weight: bold">Course Description</span>
+                        <span style="font-size: 22px; font-weight: bold">Course Description</span>
                     </div>
 
                     <p>
@@ -68,26 +68,10 @@
                     </ul>
 
                     <div class="card shadow-sm p-3 text-dark mb-4" style="border: none; border-left: 5px solid #51be78;">
-                        <span style="font-size: 35px; font-weight: bold">Course Content</span>
+                        <span style="font-size: 22px; font-weight: bold">Course Content</span>
                     </div>
 
-                    <ol class="font-weight-bold mb-5 text-dark">
-                        <li>Lorem ipsum dolor sit amet consectetur</li>
-                        <li>consectetur adipisicing  </li>
-                        <li>Sit dolor repellat esse</li>
-                        <li>Necessitatibus</li>
-                        <li>Sed necessitatibus itaque </li>
-                        <li>Lorem ipsum dolor sit amet consectetur</li>
-                        <li>consectetur adipisicing  </li>
-                        <li>Sit dolor repellat esse</li>
-                        <li>Necessitatibus</li>
-                        <li>Sed necessitatibus itaque </li>
-                        <li>Lorem ipsum dolor sit amet consectetur</li>
-                        <li>consectetur adipisicing  </li>
-                        <li>Sit dolor repellat esse</li>
-                        <li>Necessitatibus</li>
-                        <li>Sed necessitatibus itaque </li>
-                    </ol>
+                    @include('partials.course.content')
 
                 </div>
 

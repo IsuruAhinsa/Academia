@@ -27,7 +27,7 @@
 
             <div class="row">
 
-                @include('partials.news')
+                @include('partials.news.news-item')
 
             </div>
 

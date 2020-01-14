@@ -27,7 +27,7 @@
 
             <div class="row">
 
-                @include('partials.course')
+                @include('partials.course.course-item')
 
             </div>
 
